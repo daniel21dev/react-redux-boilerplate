@@ -6,9 +6,9 @@ export const getPostsAction = () =>{
         dispatch( getPosts() )
         try {
             const resp = await axiosClient.get('/posts')
-            getPostsSuccess( resp.data )
+            dispatch( getPostsSuccess( resp.data ) )
         } catch (error) {
-            getPostsError( error )
+            dispatch( getPostsError( error ) )
         }
     }
 }
