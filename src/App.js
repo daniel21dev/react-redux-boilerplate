@@ -1,8 +1,16 @@
-import { Provider } from "react-redux";
-import store from "./store";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getPostsAction } from "./actions/postsActions";
 
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch( getPostsAction() )
+  }, [])
+
   return (
     <div>
       hola
