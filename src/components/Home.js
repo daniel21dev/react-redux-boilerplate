@@ -6,7 +6,9 @@ export const Home = () => {
     return (
         <>
             <Header />
-                <h1>You are in Home!</h1>
+                <div className="h-96 flex items-center justify-center">
+                    <h1 className="text-4xl">You are in Home!</h1>
+                </div>
             <Footer />
         </>
     )
