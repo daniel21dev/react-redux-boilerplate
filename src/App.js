@@ -1,20 +1,14 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getPostsAction } from "./actions/postsActions";
+import { Provider } from "react-redux";
+import { AppRouter } from "./components/routes/AppRouter";
+import store from "./store";
 
 
 function App() {
 
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch( getPostsAction() )
-  }, [])
-
   return (
-    <div>
-      hola
-    </div>
+    <Provider store={ store }>
+      <AppRouter />
+    </Provider>
   );
 }
 
