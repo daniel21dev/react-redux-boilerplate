@@ -1,15 +1,12 @@
 import React from 'react'
-import { Footer } from './layout/Footer'
-import { Header } from './layout/Header'
+import { Layout } from './layout/Layout'
 
 export const Page2 = () => {
     return (
-        <>
-            <Header />
-                <div className="h-96 flex items-center justify-center">
-                    <h1 className="text-4xl">You are in page2</h1>
-                </div>
-            <Footer />   
-        </>
+        <Layout>
+            <div className="h-96 flex items-center justify-center">
+                <h1 className="text-4xl">You are in Page 2!</h1>
+            </div>
+        </Layout>
     )
 }
